@@ -886,6 +886,149 @@
 
             </div>
 
+            <!-- =========================
+   TELEGRAM DOWNLOAD BUTTON
+   (Insert this block after the existing download-note paragraph)
+   ========================= -->
+
+<div class="telegram-download-section">
+    <a href="https://t.me/+4pXthrdrbi03M2Ux" 
+       class="telegram-btn" 
+       target="_blank"
+       rel="noopener noreferrer">
+        
+        <i class="fa-brands fa-telegram"></i>
+        
+        <span>
+            Download from Telegram
+        </span>
+        
+        <i class="fa-solid fa-arrow-up-right-from-square telegram-arrow"></i>
+    </a>
+
+    <p class="telegram-note">
+        <i class="fa-regular fa-circle-check"></i>
+        Join our Telegram channel for the latest version
+    </p>
+</div>
+
+<!-- =========================
+   TELEGRAM BUTTON STYLES
+   Add these inside the existing <style> block
+   ========================= -->
+
+<style>
+    /* Telegram button container – matches download section spacing */
+    .telegram-download-section {
+        width: 100%;
+        margin-top: 14px;          /* space below existing download note */
+    }
+
+    /* Telegram button – premium look, distinct from main APK button */
+    .telegram-btn {
+        width: 100%;
+        min-height: 56px;          /* slightly smaller than main button */
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        text-decoration: none;
+        color: #ffffff;
+        border-radius: 18px;
+        font-family: "Nunito", sans-serif;
+        font-size: 15px;
+        font-weight: 800;
+        background: linear-gradient(135deg, #1f96e8, #2a7bcb);
+        box-shadow: 0 12px 24px rgba(0, 100, 200, 0.25);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.18s ease, box-shadow 0.2s ease;
+    }
+
+    /* subtle shine animation – matches main button style */
+    .telegram-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -80%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.22),
+            transparent
+        );
+        transform: skewX(-25deg);
+        animation: buttonShine 3.2s infinite;
+    }
+
+    /* re-use existing shine keyframes (already defined) */
+    /* if buttonShine is missing, we define it here */
+    @keyframes buttonShine {
+        0% { left: -80%; }
+        60%, 100% { left: 150%; }
+    }
+
+    /* Telegram icon */
+    .telegram-btn i:first-child {
+        font-size: 22px;
+        position: relative;
+        z-index: 2;
+        color: #fff;
+    }
+
+    .telegram-btn span {
+        position: relative;
+        z-index: 2;
+        letter-spacing: 0.2px;
+    }
+
+    .telegram-arrow {
+        font-size: 13px;
+        opacity: 0.8;
+        position: relative;
+        z-index: 2;
+        transition: transform 0.2s ease;
+    }
+
+    /* hover / active feedback */
+    .telegram-btn:hover .telegram-arrow {
+        transform: translate(2px, -2px);
+    }
+
+    .telegram-btn:active {
+        transform: scale(0.97);
+        box-shadow: 0 6px 14px rgba(0, 80, 180, 0.25);
+    }
+
+    /* small note under Telegram button – matches existing .download-note style */
+    .telegram-note {
+        margin: 10px 0 0 0;
+        text-align: center;
+        color: #9ba1ad;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 1.6;
+    }
+
+    .telegram-note i {
+        color: #16824b;
+        margin-right: 5px;
+    }
+
+    /* responsive fine-tune */
+    @media (max-width: 370px) {
+        .telegram-btn {
+            font-size: 13px;
+            min-height: 50px;
+        }
+        .telegram-btn i:first-child {
+            font-size: 19px;
+        }
+    }
+</style>
 
             <!-- Features -->
 
